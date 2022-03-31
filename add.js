@@ -69,5 +69,9 @@ function multiply(num1,num2) {
   }
 
 multiply(4,9);
+<<<<<<< HEAD
 multiply(20,21);
+=======
+multiply(20,20);
+>>>>>>> main
 multiply(0.5,3);
