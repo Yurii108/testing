@@ -68,6 +68,6 @@ function multiply(num1,num2) {
     return result;
   }
 
-multiply(6,9);
+multiply(4,9);
 multiply(20,20);
 multiply(0.5,3);
