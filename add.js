@@ -1,73 +1,92 @@
-document.querySelector('.header').innerText = 'JS_Portfolio';
-document.querySelector('.head').innerText = 'Проект над которым я работаю';
+let inputOne = document.querySelector('.input-one');
+let inputTwo = document.querySelector('.input-two');
 
-let amI = document.querySelector('.ami');
+let plusButton = document.querySelector('.plus');
+let minusButton = document.querySelector('.minus');
+let divideButton = document.querySelector('.divide');
+let multiplyBotton = document.querySelector('.multiply');
 
-let whoAmI = {
-    name: 'Yurii',
-    surname: 'Paraska',
-    yearsOld: 27
-}; 
+let clearButton = document.querySelector('.clear');
 
-amI.innerText = `${whoAmI.name} ${whoAmI.surname} ${whoAmI.yearsOld} years old`;
+let resultText = document.querySelector('.result');
 
-const intOhe = 'vegetarian';
-const intTwo = 'filosofia';
-const inthree = 'walking';
+clearButton.addEventListener('click', function() {
+    resultText.innerText = '';
+    inputOne.value = '';
+    inputTwo.value = '';
+} );
 
-let myHobbi = ['vegetarian', 'filosofia', 'walking'];
+plusButton.addEventListener('click', function() {
+    let numOne = parseInt(inputOne.value);
+    let numTwo = parseInt(inputTwo.value);
+    
+    let sum = numOne + numTwo;
+    
+    resultText.innerText = sum;
+});
 
-let hobbi = document.querySelector('.veg');
+minusButton.addEventListener('click', function() {
+    let numOne = parseInt(inputOne.value);
+    let numTwo = parseInt(inputTwo.value);
+    
+    let sumM = numOne - numTwo;
+    
+    resultText.innerText = sumM;
+});
 
-//myHobbi.push('sport'); - добавляю в конець
-// myHobbi.pop(); - убирает последнее слово
-myHobbi.shift(); //- удаляет парвое слово в списке
-myHobbi.unshift('sport');
+ divideButton.addEventListener('click', function() {
+    let numOne = parseInt(inputOne.value);
+    let numTwo = parseInt(inputTwo.value);
+    
+    let sumD = numOne / numTwo;
 
-hobbi.innerText = myHobbi;
+    resultText.innerText = sumD;
+});
 
-// hobbi.innerText = myHobbi.length; //- Считает сколько есть объектов.
-// hobbi.innerText = myHobbi[1]; - Если я хочу получить один из объектов.
-
-let addNeck = document.querySelector('.neck');
-addNeck.innerText = 'variable';
-
-let addTwo = document.querySelector('.neckTwo');
-addTwo.innerText = 'tips & objects'; 
-
-const addThree = document.querySelector('.neckThree');
-addThree.innerText = 'presses';
-
-let addFour = document.querySelector('.neckFour');
-let firstObject = 'tunctions';
-let secondObject = 'conditions';
-
-//addFour.innerText = firstName + '&' + secondName;
-
-addFour.innerText = `${firstObject} & ${secondObject} & interpolations`;
+multiplyBotton.addEventListener('click', function() {
+    let numOne = parseInt(inputOne.value);
+    let numTwo = parseInt(inputTwo.value);
+    
+    let sumMU = numOne * numTwo;
+    
+    resultText.innerText = sumMU;
+});
 
 
-function multiply(a, b) {
-    var result = a * b;
-    return result;
-}
 
-multiply(5, 8); 
 
-function multiply(num1,num2) {
-    var result = num1 * num2;
-    return result;
-  }
 
-multiply(4,7);
-multiply(20,20);
-multiply(0.5,3);
 
-function multiply(num1,num2) {
-    var result = num1 * num2;
-    return result;
-  }
 
-multiply(4,9);
-multiply(20,21);
-multiply(0.5,3);
+
+
+
+
+// let myButton = document.querySelector('.my-button');
+// let myInput = document.querySelector('.my-input');
+// let header = document.querySelector('.header');
+
+// myButton.addEventListener('click', function() {
+    
+//     let amount = parseInt(myInput.value);
+//     let VAT = 0.15;
+
+//     header.innerText = `Сумма ндс с ${amount} cуммы будет ${amount * VAT}`;
+
+// });
+
+// let myButton = document.querySelector('.my-button');
+// let myInput = document.querySelector('.my-input');
+// let header = document.querySelector('.header');
+// let mySecondInput = document.querySelector('.input-two');
+
+// myButton.addEventListener('click', function(){
+
+//     let inputValue = parseInt(myInput.value);
+
+//     let secondInput = parseInt(mySecondInput.value);
+    
+//     header.innerText = inputValue + secondInput;
+
+//     // header.innerText = `${secondInput} ${inputValue}`;
+// }); 
