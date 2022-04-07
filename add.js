@@ -1,56 +1,25 @@
-let inputOne = document.querySelector('.input-one');
-let inputTwo = document.querySelector('.input-two');
+// debugger;
 
-let plusButton = document.querySelector('.plus');
-let minusButton = document.querySelector('.minus');
-let divideButton = document.querySelector('.divide');
-let multiplyBotton = document.querySelector('.multiply');
+let carObj = {nameOne: 'BMW' , color: 'red', year: 2020};
 
-let clearButton = document.querySelector('.clear');
+console.log(carObj);
 
-let resultText = document.querySelector('.result');
+let body = document.querySelector('body');
 
-clearButton.addEventListener('click', function() {
-    resultText.innerText = '';
-    inputOne.value = '';
-    inputTwo.value = '';
-} );
+let newCar = carObj.nameOne;
 
-plusButton.addEventListener('click', function() {
-    let numOne = parseInt(inputOne.value);
-    let numTwo = parseInt(inputTwo.value);
-    
-    let sum = numOne + numTwo;
-    
-    resultText.innerText = sum;
-});
+let nameOne = document.createElement('p');
+nameOne.innerText = carObj.nameOne;
 
-minusButton.addEventListener('click', function() {
-    let numOne = parseInt(inputOne.value);
-    let numTwo = parseInt(inputTwo.value);
-    
-    let sumM = numOne - numTwo;
-    
-    resultText.innerText = sumM;
-});
+let color = document.createElement('p');
+color.innerText = carObj.color;
 
- divideButton.addEventListener('click', function() {
-    let numOne = parseInt(inputOne.value);
-    let numTwo = parseInt(inputTwo.value);
-    
-    let sumD = numOne / numTwo;
+let year = document.createElement('p');
+year.innerText = carObj.year;
 
-    resultText.innerText = sumD;
-});
-
-multiplyBotton.addEventListener('click', function() {
-    let numOne = parseInt(inputOne.value);
-    let numTwo = parseInt(inputTwo.value);
-    
-    let sumMU = numOne * numTwo;
-    
-    resultText.innerText = sumMU;
-});
+body.appendChild(nameOne);
+body.appendChild(color);
+body.appendChild(year);
 
 
 
@@ -62,31 +31,87 @@ multiplyBotton.addEventListener('click', function() {
 
 
 
-// let myButton = document.querySelector('.my-button');
-// let myInput = document.querySelector('.my-input');
-// let header = document.querySelector('.header');
 
-// myButton.addEventListener('click', function() {
-    
-//     let amount = parseInt(myInput.value);
-//     let VAT = 0.15;
 
-//     header.innerText = `Сумма ндс с ${amount} cуммы будет ${amount * VAT}`;
 
+
+// let myBody = document.querySelector('body');
+
+// let car = 'BMW';
+
+// let carObj = {name: 'BMW', color: 'red'};
+
+// let age = 'age= ' + 35;
+
+// let sum = 1 + 1;
+
+// let cityArr = ['New York', 'Tokyo', 'London']
+
+// console.log(cityArr[1]);
+// console.log(sum);
+// console.log(car);
+// console.log(carObj);
+// console.log(age);
+
+
+
+
+
+
+
+
+// let numberOne = document.createElement('h1');
+// numberOne.innerText = 2 + 2;
+
+// let numberTwo = document.createElement('h1');
+// numberTwo.innerText = 3 + 2;
+
+// myBody.appendChild(numberOne);
+// myBody.appendChild(numberTwo);
+
+
+
+
+// for ( let start = 1; start < 50; start = start + 1) {
+//     let numberOne = document.createElement('h1');
+//     numberOne.innerText = 78 + 4;
+
+//     myBody.appendChild(numberOne);
+// }
+
+
+
+
+// let myInput = document.createElement('input');
+// myInput.setAttribute('type', 'number');
+
+// let myButton = document.createElement('button');
+// myButton.innerText = 'Show';
+
+// let myText = document.createElement('p');
+// myText.innerText = ''; //Hello World Hare Krishna
+
+// let body = document.querySelector('body');
+// body.appendChild(myInput);
+// body.appendChild(myButton);
+// body.appendChild(myText);
+
+// // let numberOne = document.querySelector('.number');
+// // let button = document.querySelector('.button');
+// // let result = document.querySelector('.result');
+
+// myButton.createElement('click', function() {
+   
+//     let prace = 100; 
+//     let age = myInput.value;
+
+//     if(age < 8) {
+//         prace = 0; //Если возраст меньше 8 цена 0 грн
+//     } else if(age <= 20) {
+//         prace = prace * 0.8; //Если меньше 20 лет, скидка 20% = 80 грн 
+//     } else if(age > 20) {
+//         prace = prace; //Если возраст больше 20 лет цена 100% = 100 грн
+//     }
+
+//     myText.innerText = `Цена билета ${prace} грн`;
 // });
-
-// let myButton = document.querySelector('.my-button');
-// let myInput = document.querySelector('.my-input');
-// let header = document.querySelector('.header');
-// let mySecondInput = document.querySelector('.input-two');
-
-// myButton.addEventListener('click', function(){
-
-//     let inputValue = parseInt(myInput.value);
-
-//     let secondInput = parseInt(mySecondInput.value);
-    
-//     header.innerText = inputValue + secondInput;
-
-//     // header.innerText = `${secondInput} ${inputValue}`;
-// }); 
