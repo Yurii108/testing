@@ -1,6 +1,6 @@
 // debugger;
 
-let carObj = {nameOne: 'BMW' , color: 'red', year: 2020};
+let carObj = {nameOne: 'BMW5' , color: 'red', year: 2020};
 
 console.log(carObj);
 
@@ -20,6 +20,7 @@ year.innerText = carObj.year;
 body.appendChild(nameOne);
 body.appendChild(color);
 body.appendChild(year);
+
 
 
 
